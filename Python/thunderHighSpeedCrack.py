@@ -1,5 +1,3 @@
-#Linux版迅雷高速通道限制破解脚本
-
 # -*- coding: utf-8 -*-
 import sqlite3
 import json
@@ -8,7 +6,6 @@ import array
 import re
 import sys
 import os
-#设置中文编码支持
 reload(sys)
 sys.setdefaultencoding('utf-8')
 # print sys.getdefaultencoding()
@@ -75,8 +72,8 @@ def updateUserData():
         global rows
         rows = c.executemany("UPDATE "+superSpeedTable+" set UserData = ?",newdatas)
         if rows > 0:
-            os.system('xdg-open /usr/local/share/applications/deepin.com.thunderspeed.desktop')
-            # print 'done'
+            # os.system('xdg-open /usr/local/share/applications/deepin.com.thunderspeed.desktop')
+            print 'done'
         else:
             print 'fail'
             exit(0)
